@@ -1,0 +1,76 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body,html{
+    // width:100%;
+    // height: 100%;
+}
+
+.title{
+    color: red;
+    font-size: 50px;
+}
+
+#top {
+    // width: 100%;
+    // height: 100%;
+    // background-image: url("");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size:cover;
+    .top-content {
+        width: 500px;
+        margin-top: 150px;
+        padding: 10px;
+        background-color: rgba(13, 201, 207, 0.8);
+        text-align: center;
+        .go-btn {
+            
+        }
+    }
+}
+
+.menu {
+    color: white;
+    font-size: 20px;
+    margin-right:10px ;
+}
+
+.comment {
+    margin-top: 15px;
+}
+
+#myChart {
+    width:600px;
+    height:500px;
+    background-color:white;
+}
+
+.contents {
+    margin:10px;
+}
+
+.return {
+    margin: 20px;
+}
+
+.main-body {
+    margin: 20px;
+}
+
+.join {
+    font-size: 20px;
+    :visited{
+        color: rgba(216, 41, 216, 0.822);
+    }
+}
+
+.login-name {
+    color:rgb(40, 211, 35);
+}
+
+.message-bar{
+    display: none;
+    background-color: rgb(212, 95, 52);
+}

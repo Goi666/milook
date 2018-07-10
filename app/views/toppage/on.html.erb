@@ -1,0 +1,14 @@
+<div id="top">
+    <div class="row">
+        <div class="top-content mx-auto">
+            <h3>Let's Join!!</h3>
+            <% if user_signed_in? %>
+                <%= button_to "start", company_index_path, {method: :get, class: "go-btn btn-lg btn-success"} %>
+            <% else %>
+                <div class="join">
+                    <%= render 'devise/shared/links' %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

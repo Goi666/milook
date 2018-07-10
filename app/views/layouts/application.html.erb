@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Milook</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="nav-item active">
+            <%= link_to "Milook", "/" ,{ :class => "nav-link title"} %></span></a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 
+          <li class="nav-item active"><%= link_to "Search", company_index_path ,{ :class => "menu"} %></li>
+          <li class="nav-item active"><%= link_to "Ranking", company_index_path ,{ :class => "menu"} %></li>
+          <li class="nav-item active"><%= link_to "MyPage", company_index_path ,{ :class => "menu"} %></li>
+          -->
+          <% if user_signed_in? %>
+            ( ˘ω˘ )つ<li class="nav-item active menu login-name"><strong><%= current_user.user_id %></strong></li>
+            <li class="nav-item active"><%= link_to 'Edit', edit_user_registration_path ,{:class => "menu"} %></li>
+            <li class="nav-item active"><%= link_to "Logout", destroy_user_session_path ,{:class => "menu"} %></li>
+          <% end %>
+          
+        </ul>
+      </div>
+    </nav>
+        <!-- 非表示にしてます -->
+        <p class="notice message-bar"><%= notice %></p>
+        <p class="alert message-bar"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>

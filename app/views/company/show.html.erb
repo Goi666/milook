@@ -1,0 +1,28 @@
+<div class="main-body">
+    <h1><%= @com.company_name %></h1>
+
+    <%= high_chart("sample", @graph) %>
+
+    <h3>Comments</h3>
+    <div class="container">
+        <div class="row">
+            <% @comment.each do |c| %>
+                <div class="col-sm-12 col-xs-12" style="background-color:aqua;">
+                    <div class="row comment contents">
+                        <div class="col-xs-3">
+                            <div style="width:200px;height:150px;background-color:red;">image</div>
+                        </div>
+                        <div class="col-xs-9">
+                            <p><%= c.user_name %></p>
+                            <hr>
+                            <spna><%= c.comment %></span>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="return">
+        <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
+    </div>
+</div>

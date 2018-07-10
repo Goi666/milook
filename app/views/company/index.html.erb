@@ -1,0 +1,25 @@
+<div class="main-body">
+    <h3>company list</h3>
+    <div class="container">
+        <div class="row">
+            <% @com.each do |c| %>
+                <div class="col-sm-3 col-xs-6 contents" style="background-color:aqua;">
+                    <%= link_to company_path(c.id) do %>
+                        <div class="row">
+                            <div class="col-xs-5 col-md-12 col-lg-12">
+                                <div style="height:150px;background-color:red;">image</div>
+                            </div>
+                            <div class="col-xs-7">
+                                <p><%= c.company_name %></p>
+                                <p>やばさ</p>
+                                <p>★★★★★</p>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <%= button_to "new", company_new_path, {method: :get, class: "go-btn btn-lg btn-primary"} %>
+</div>

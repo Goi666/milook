@@ -1,0 +1,39 @@
+users
+
+id primary key,name,password,email,nickname,image,,authority default 0
+
+
+companies
+
+id primary key,company_id,company_type,company_name,company_url
+
+
+evaluations
+
+id primary key,company_id,environment,salary,overtime,boss,corporate_style,management,dangerous,other
+
+
+comments
+
+id primary key,company_id,user_name,comment
+
+
+
+rails generate model User name:string email:string
+
+rails generate model Company id:integer primary key company_id:integer company_type:integer company_name:string company_yrl
+
+rails generate model Evaluation id:integer primary key company_id:integer environment:integer salary:integer overtime:integer boss:integer corporate_style:integer management:integer dangerous:integer other:integer
+
+rails generate model Comment id:integer primary key company_id:integer user_name:string comment:string
+
+
+company
+
+has_many :evaluation
+  accepts_nested_attributes_for :evaluation
+
+
+  evaluation
+
+      belongs_to :company,optional: true
