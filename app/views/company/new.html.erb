@@ -1,5 +1,5 @@
 <h2>new create</h2>
-<%= form_for(:company) do |f| %>
+<%= form_for(@company, url: company_index_path) do |f| %>
     <div class="field">
         <%= f.label(:company_name,"会社名") %>
         <%= f.text_field(:company_name) %><br>

@@ -41,8 +41,6 @@ class CompanyController < ApplicationController
     def create
 
         @company = Company.new(company_params)
-        logger.debug("///////////////////////////▼@company in ///////////////////")
-        logger.debug(@company.evaluations.environment)
 
         if @company.save
             redirect_to company_index_path
@@ -62,7 +60,7 @@ class CompanyController < ApplicationController
         params.require(:company).
         permit(:company_name, :company_type, 
             evaluations_attributes:
-                [:id,:environment,:salary,:overtime,:boss,:corporate_style,:management,:dangerous,:other]
+                [:environment,:salary,:overtime,:boss,:corporate_style,:management,:dangerous,:other]
         )
     end
 end
