@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :company
   root "toppage#on"
 
+  get "company/:id/data" => "company#data"
+  post "company/push" => "company#push"
+
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end

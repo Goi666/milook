@@ -3,6 +3,7 @@
 
     <%= high_chart("sample", @graph) %>
 
+    <%= button_to "Data Push" , "#{@com.id}/data" , {method: :get ,class: "btn-warning"} %>
     <h3>Comments</h3>
     <div class="container">
         <div class="row">
