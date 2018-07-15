@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :company
+  #resources :company
   root "toppage#on"
 
   get "company/:id/data" => "company#data"
   post "company/push" => "company#push"
+
+  resources :company do
+    resources :comments
+  end
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

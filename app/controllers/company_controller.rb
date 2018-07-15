@@ -5,9 +5,19 @@ class CompanyController < ApplicationController
 
     def show
         @com = Company.find_by_id(params[:id])
-        @comment = Comment.where(company_id: params[:id]).all
+
         data = Evaluation.where(company_id: params[:id]).all
         dtc = Evaluation.where(company_id: params[:id]).count
+
+        @comments = Comment.where(company_id: params[:id]).all
+        # if user_signed_in?
+        #     @user = User.find(@current_user)
+        # end
+
+        # @company = Company.new
+        @company = @com
+        @comment = Comment.new #②
+        #@comments = @com.comments.build
 
         environment = 0
         salary = 0
@@ -29,8 +39,6 @@ class CompanyController < ApplicationController
             other += g.other
         end 
 
-        logger.debug(salary)
-
         environment = environment / dtc
         salary = salary / dtc
         overtime = overtime / dtc
@@ -40,10 +48,8 @@ class CompanyController < ApplicationController
         dangerous = dangerous / dtc
         other = other /dtc
 
-        logger.debug(salary)
-
         #chart-radar
-        genre = ['環境','給料','残業','上司','社風','経営方針','ヤベーやつ','その他']
+        genre = ['環境','給料','残業','上司','社風','経営方針','やばいやつ','その他']
         aData = [environment,salary,overtime,boss,corporate_style,management,dangerous,other]
     
         @graph = LazyHighCharts::HighChart.new('graph') do |f|

@@ -3,25 +3,21 @@
 
     <%= high_chart("sample", @graph) %>
 
-    <%= button_to "Data Push" , "#{@com.id}/data" , {method: :get ,class: "btn-warning"} %>
-    <h3>Comments</h3>
-    <div class="container">
-        <div class="row">
-            <% @comment.each do |c| %>
-                <div class="col-sm-12 col-xs-12" style="background-color:aqua;">
-                    <div class="row comment contents">
-                        <div class="col-xs-3">
-                            <div style="width:200px;height:150px;background-color:red;">image</div>
-                        </div>
-                        <div class="col-xs-9">
-                            <p><%= c.user_name %></p>
-                            <hr>
-                            <spna><%= c.comment %></span>
-                        </div>
-                    </div>
-                </div>
-            <% end %>
-        </div>
+    <%= button_to "データを追加する" , "#{@com.id}/data" , {method: :get ,class: "btn-lg btn-warning"} %>
+    
+    <!-- 7.14~ Ajax仕様コメント機能実装途中 -->
+    <!-- 現在起こっているエラー：NoMethodError in Company#show -->
+    <!-- ただし、_form.html.erb内のform_withを指している -->
+    <div>
+        <h4>コメント</h4>
+        <div id="comments_area"><!-- #① -->
+        <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+        <%= render partial: 'comments/index', locals: { comments: @comments } %>
+        </div>  
+        <% if user_signed_in? %>
+        <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+        <%= render partial: 'comments/form', locals: {company: @company,comment: @comment}  %>
+        <% end %>
     </div>
     <div class="return">
         <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
