@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "company/:id/data" => "company#data"
   post "company/push" => "company#push"
+  post "company/:id/destroy" => "company#destroy"
 
   resources :company do
     resources :comments

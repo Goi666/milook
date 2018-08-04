@@ -22,4 +22,11 @@
     <div class="return">
         <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
     </div>
+    <!-- 削除 -->
+    <% if @com.user_id == current_user.user_id %>
+        <%= link_to("/company/#{@com.id}/destroy",{method:"post"}) do %>
+            <button type="button" class="btn btn-outline-primary">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>投稿削除</button>
+        <% end %>
+    <% end %>
 </div>

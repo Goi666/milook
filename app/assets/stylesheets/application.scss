@@ -14,3 +14,11 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "index";
+@import "toppage";
+@import "comment";
+@import "company";
+
+
+.login-name {
+    color:rgb(228, 99, 221);
+}

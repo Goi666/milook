@@ -86,6 +86,9 @@ gem 'omniauth-twitter'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+gem 'carrierwave', '~> 1.1'
+gem 'rmagick'
+
 ## gem 'pry-rails'
 ## gem 'pry-byebug'
 ## gem 'pry-doc'

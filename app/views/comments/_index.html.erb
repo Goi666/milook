@@ -2,7 +2,7 @@
   <% unless comment.id.nil? %>
     <p><%= comment.user_id %>さん</p>
     <p>コメント：<%= comment.content %></p>
-    <% if comment.user == current_user %>
+    <% if comment.user_id == current_user.user_id %>
       <p><%= link_to 'コメントを削除する', company_comment_path(comment.company_id, comment.id), method: :delete, remote: true %></p>
     <% end %>
   <% end %>

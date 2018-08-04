@@ -1,6 +1,8 @@
 class CompanyController < ApplicationController
     def index
         @com = Company.all
+
+        #average
     end
 
     def show
@@ -39,18 +41,20 @@ class CompanyController < ApplicationController
             other += g.other
         end 
 
-        environment = environment / dtc
-        salary = salary / dtc
-        overtime = overtime / dtc
-        boss = boss /dtc
-        corporate_style = corporate_style / dtc
-        management = management /dtc
-        dangerous = dangerous / dtc
-        other = other /dtc
+        @environment = environment / dtc
+        @salary = salary / dtc
+        @overtime = overtime / dtc
+        @boss = boss /dtc
+        @corporate_style = corporate_style / dtc
+        @management = management /dtc
+        @dangerous = dangerous / dtc
+        @other = other /dtc
+
+        @average = @environment + @salary + @overtime + @boss + @corporate_style + @management + @dangerous + @other
 
         #chart-radar
         genre = ['環境','給料','残業','上司','社風','経営方針','やばいやつ','その他']
-        aData = [environment,salary,overtime,boss,corporate_style,management,dangerous,other]
+        aData = [@environment,@salary,@overtime,@boss,@corporate_style,@management,@dangerous,@other]
     
         @graph = LazyHighCharts::HighChart.new('graph') do |f|
           f.chart(polar: true,type:'line') #グラフの種類
@@ -70,11 +74,6 @@ class CompanyController < ApplicationController
         @company = Company.new
         @company.evaluations.build
     end
-
-    # def evaluation_params
-    #     params.require(:evaluation).permit(:environment, :salary, :overtime, :boss, :corporate_style, :management, :dangerous, :other)
-    #     logger.debug("▼company_params")
-    # end
     
       # POST /company & evaluation
       # POST /users.json
@@ -86,7 +85,7 @@ class CompanyController < ApplicationController
             redirect_to company_index_path
             #format.html { redirect_to @company, notice: 'Company was successfully created.' }
         else
-            format.html { render :new }
+            render new_company_path
         end
     end
 
@@ -106,10 +105,19 @@ class CompanyController < ApplicationController
         end
     end
 
+    def destroy
+        @com = Company.find_by(id: params[:id])
+        if @com.destroy
+            redirect_to(company_index_path)
+        else
+            render "/"
+        end
+    end
+
     private
     def company_params
         params.require(:company).
-        permit(:company_name, :company_type, 
+        permit(:company_name, :company_type, :image, :user_id,
             evaluations_attributes:
                 [:environment,:salary,:overtime,:boss,:corporate_style,:management,:dangerous,:other]
         )
@@ -118,6 +126,11 @@ class CompanyController < ApplicationController
     def evaluation_params
         params.require(:evaluation).
             permit(:company_id,:environment,:salary,:overtime,:boss,:corporate_style,:management,:dangerous,:other)
+    end
+
+    ##evaluationの平均点をメソッドとしてまとめておく
+    def average
+
     end
 
 end

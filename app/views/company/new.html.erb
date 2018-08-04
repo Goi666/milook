@@ -9,6 +9,17 @@
         <%= f.select :company_type, options_for_select([["IT", 1], ["営業", 2],["販売", 3], ["マスコミ", 4],["工業", 5], ["その他", 6]]), :include_blank => true %><br>
     </div>
 
+    <div class="field">
+        <%= f.label :image %><br>
+        <%= f.file_field :image %><br>
+        <%= f.hidden_field :image_cache %>
+    </div>
+
+    <div class="field">
+        <%= f.label :user_id %><br>
+        <%= f.hidden_field :user_id,:value => current_user.user_id %>
+    </div>
+
     <h3>データ入力</h3>
     <h4>※値が高いほどブラックやばい※</h4>
     <%= f.fields_for :evaluations do |b| %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_14_130702) do
+ActiveRecord::Schema.define(version: 2018_08_04_062307) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "company_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2018_07_14_130702) do
     t.string "company_url", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image", default: ""
+    t.string "user_id"
   end
 
   create_table "evaluations", force: :cascade do |t|

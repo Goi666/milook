@@ -1,18 +1,24 @@
 <div class="main-body">
     <h3>company list</h3>
+    
     <div class="container">
         <div class="row">
             <% @com.each do |c| %>
-                <div class="col-sm-3 col-xs-6 contents" style="background-color:aqua;">
+                <div class="col-sm-4 col-xs-6 contents">
                     <%= link_to company_path(c.id) do %>
                         <div class="row">
-                            <div class="col-xs-5 col-md-12 col-lg-12">
-                                <div style="height:150px;background-color:red;">image</div>
+                            <div class="col-sm-12 col-xs-12 company_image">
+                                <% img = c.image.to_s %>
+                                <% check = img.include?(".") %>
+                                <% if check %>
+                                    <%= image_tag "#{c.image}" %>
+                                <% else %>
+                                    <%= image_tag "/noimage.png" %>
+                                        <!-- <%= c.image %> -->
+                                <% end %>
                             </div>
-                            <div class="col-xs-7">
+                            <div class="company_name">
                                 <p><%= c.company_name %></p>
-                                <p>やばさ</p>
-                                <p>★★★★★</p>
                             </div>
                         </div>
                     <% end %>
