@@ -1,52 +1,59 @@
-<h2>Data Push</h2>
-<h3><%= @com.company_name %></h3>
+<div class="main-body">
+    <br>
+    <h6>[真っ黒い会社] 10>7>5>3>1 [真っ白な会社]</h6>
+    <br>
 
-<%= form_for(@evaluation, :url => {:action => "push"}) do |f| %>
-    <h3>データ入力</h3>
-    <h4>※値が高いほどブラックやばい※</h4>
-    <div style="">
-        <%= f.label(:company_id, "会社No（hidden）") %>
-        <%= f.hidden_field :company_id, :value => @com.id %>
-    </div>
-    <div class="field">
-        <%= f.label(:environment, "環境") %>
-        <%= f.select :environment, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]],), :include_blank => true %><br>
-    </div>
-    <div class="field">
+    <h3>会社名：「<%= @com.company_name %>」</h3>
 
-        <%= f.label(:salary,"給料") %>
-        <%= f.select :salary, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="field">
+    <%= form_for(@evaluation, :url => {:action => "push"}) do |f| %>
 
-        <%= f.label(:overtime,"残業") %>
-        <%= f.select :overtime, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="field">
+        <div class="field">
+            <%= f.hidden_field :company_id, :value => @com.id %>
+        </div>
 
-        <%= f.label(:boss,"上司") %>
-        <%= f.select :boss, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="field">
+        <div class="field">
+            <%= f.label(:environment, "環境") %>
+            <%= f.select :environment, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]],), :include_blank => true %><br>
+        </div>
+        <div class="field">
 
-        <%= f.label(:corporate_style,"社風") %>
-        <%= f.select :corporate_style, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="field">
+            <%= f.label(:salary,"給料") %>
+            <%= f.select :salary, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
 
-        <%= f.label(:management,"経営方針") %>
-        <%= f.select :management, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="field">
+            <%= f.label(:overtime,"残業") %>
+            <%= f.select :overtime, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
 
-        <%= f.label(:dangerous,"ヤベーやつ") %>
-        <%= f.select :dangerous, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+            <%= f.label(:boss,"上司") %>
+            <%= f.select :boss, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
+
+            <%= f.label(:corporate_style,"社風") %>
+            <%= f.select :corporate_style, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
+
+            <%= f.label(:management,"経営方針") %>
+            <%= f.select :management, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
+
+            <%= f.label(:dangerous,"ヤベーやつ") %>
+            <%= f.select :dangerous, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="field">
+            <%= f.label(:other,"その他") %>
+            <%= f.select :other, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
+        </div>
+        <div class="actions">
+            <%= f.submit "登録" , :class => "btn-lg btn-warning" %>
+        </div>
+    <% end %>
+    <div class="return">
+        <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
     </div>
-    <div class="field">
-        <%= f.label(:other,"その他") %>
-        <%= f.select :other, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-    </div>
-    <div class="actions">
-        <%= f.submit "登録" , :class => "btn-lg btn-warning" %>
-    </div>
-<% end %>
+</div>

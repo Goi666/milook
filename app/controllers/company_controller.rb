@@ -1,17 +1,21 @@
 class CompanyController < ApplicationController
+
+    PER = 10
+
     def index
-        @com = Company.all
+        @com = Company.page(params[:page]).per(PER)
 
         #average
     end
 
     def show
+        
         @com = Company.find_by_id(params[:id])
 
         data = Evaluation.where(company_id: params[:id]).all
         dtc = Evaluation.where(company_id: params[:id]).count
 
-        @comments = Comment.where(company_id: params[:id]).all
+        @comments = Comment.where(company_id: params[:id]).page(params[:page]).per(PER)
         # if user_signed_in?
         #     @user = User.find(@current_user)
         # end

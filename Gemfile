@@ -89,6 +89,8 @@ gem 'devise-i18n-views'
 gem 'carrierwave', '~> 1.1'
 gem 'rmagick'
 
+gem 'kaminari', '~> 0.17.0'
+
 ## gem 'pry-rails'
 ## gem 'pry-byebug'
 ## gem 'pry-doc'

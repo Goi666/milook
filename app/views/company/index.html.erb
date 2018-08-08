@@ -1,31 +1,36 @@
-<div class="main-body">
-    <h3>company list</h3>
-    
-    <div class="container">
-        <div class="row">
-            <% @com.each do |c| %>
-                <div class="col-sm-4 col-xs-6 contents">
-                    <%= link_to company_path(c.id) do %>
-                        <div class="row">
-                            <div class="col-sm-12 col-xs-12 company_image">
-                                <% img = c.image.to_s %>
-                                <% check = img.include?(".") %>
-                                <% if check %>
-                                    <%= image_tag "#{c.image}" %>
-                                <% else %>
-                                    <%= image_tag "/noimage.png" %>
-                                        <!-- <%= c.image %> -->
-                                <% end %>
-                            </div>
-                            <div class="company_name">
-                                <p><%= c.company_name %></p>
-                            </div>
-                        </div>
-                    <% end %>
-                </div>
-            <% end %>
-        </div>
+<section class="index">
+    <div class="index_inner">
+        <h3>会社一覧</h3>
     </div>
+</section>
 
-    <%= button_to "new", new_company_path, {method: :get, class: "go-btn btn-lg btn-primary"} %>
+<div class="main-body">
+        <div class="container">
+            <div class="row">
+                <% @com.each do |c| %>
+                    <div class="col-sm-12 col-xs-12 col-md-4 contents">
+                        <%= link_to company_path(c.id) do %>
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12 company_image">
+                                    <% img = c.image.to_s %>
+                                    <% check = img.include?(".") %>
+                                    <% if check %>
+                                        <%= image_tag "#{c.image}" %>
+                                    <% else %>
+                                        <%= image_tag "/noimage.png" %>
+                                            <!-- <%= c.image %> -->
+                                    <% end %>
+                                </div>
+                                <div class="company_name">
+                                    <p><%= c.company_name %></p>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <%= paginate @com %>
+        <%= button_to "新しく会社を登録", new_company_path, {method: :get, class: "new_btn btn-lg btn-primary"} %>
+        <br>
 </div>
