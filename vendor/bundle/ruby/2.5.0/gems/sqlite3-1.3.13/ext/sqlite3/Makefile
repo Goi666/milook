@@ -31,8 +31,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20180811-34202-nb6lbw
 sitelibdir = $(DESTDIR)./.gem.20180811-34202-nb6lbw
+=======
+sitearchdir = $(DESTDIR)./.gem.20180808-88972-uf1t7s
+sitelibdir = $(DESTDIR)./.gem.20180808-88972-uf1t7s
+>>>>>>> origin/master
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -82,11 +87,19 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe  $(ARCH_FLAG)
+<<<<<<< HEAD
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/local/Cellar/sqlite/3.24.0/include
 DEFS     = 
 CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/usr/local/opt/sqlite/include -I/Users/eigo/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags)  $(ARCH_FLAG)
 ldflags  = -L. -L/Users/eigo/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib -L/usr/local/Cellar/sqlite/3.24.0/lib
+=======
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
+DEFS     = 
+CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/usr/local/Cellar/sqlite/3.24.0/include -I/Users/eigo/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags)  $(ARCH_FLAG)
+ldflags  = -L. -L/Users/eigo/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib 
+>>>>>>> origin/master
 dldflags = -L/Users/eigo/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -122,8 +135,13 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
+<<<<<<< HEAD
 libpath = . $(libdir) /usr/local/opt/sqlite/lib
 LIBPATH =  -L. -L$(libdir) -L/usr/local/opt/sqlite/lib
+=======
+libpath = . $(libdir) /usr/local/Cellar/sqlite/3.24.0/lib
+LIBPATH =  -L. -L$(libdir) -L/usr/local/Cellar/sqlite/3.24.0/lib
+>>>>>>> origin/master
 DEFFILE = 
 
 CLEANFILES = mkmf.log

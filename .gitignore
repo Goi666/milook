@@ -19,7 +19,10 @@
 
 # Ignore uploaded files in development
 /storage/*
+<<<<<<< HEAD
 !/storage/.keep
+=======
+>>>>>>> origin/master
 
 /node_modules
 /yarn-error.log
@@ -29,3 +32,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+<<<<<<< HEAD
+=======
+
+
+#手動
+config/
+>>>>>>> origin/master

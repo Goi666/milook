@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-34202-paw7j0.rb extconf.rb 
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-88972-wllbzd.rb extconf.rb 
+>>>>>>> origin/master
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -11,10 +16,17 @@ checking for rb_hash_dup() in ruby.h... yes
 checking for rb_hash_clear() in ruby.h... yes
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
+>>>>>>> origin/master
 make "DESTDIR="
 compiling buffer.c
 compiling buffer_class.c
@@ -34,6 +46,12 @@ static VALUE Unpacker_peek_next_type(VALUE self)
 compiling unpacker_ext_registry.c
 linking shared-object msgpack/msgpack.bundle
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20180811-34202-u3xas4/msgpack
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20180808-88972-1avt3ib/msgpack
+>>>>>>> origin/master

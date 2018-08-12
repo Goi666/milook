@@ -31,8 +31,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20180811-34202-15sp4qh
 sitelibdir = $(DESTDIR)./.gem.20180811-34202-15sp4qh
+=======
+sitearchdir = $(DESTDIR)./.gem.20180808-88972-mbquvs
+sitelibdir = $(DESTDIR)./.gem.20180808-88972-mbquvs
+>>>>>>> origin/master
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -81,12 +86,21 @@ optflags = -O3
 debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
+<<<<<<< HEAD
 CFLAGS   = $(CCDLFLAGS)  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-9/include/ImageMagick-6 $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
 CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\"  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-9/include/ImageMagick-6
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  =  -L/usr/local/Cellar/imagemagick@6/6.9.10-9/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16
+=======
+CFLAGS   = $(CCDLFLAGS)  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-8/include/ImageMagick-6 $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
+DEFS     = 
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\"  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-8/include/ImageMagick-6
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  =  -L/usr/local/Cellar/imagemagick@6/6.9.10-8/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16
+>>>>>>> origin/master
 dldflags = -L/Users/eigo/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -133,7 +147,11 @@ DISTCLEANDIRS =
 extout = 
 extout_prefix = 
 target_prefix = 
+<<<<<<< HEAD
 LOCAL_LIBS =  -L/usr/local/Cellar/imagemagick@6/6.9.10-9/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16
+=======
+LOCAL_LIBS =  -L/usr/local/Cellar/imagemagick@6/6.9.10-8/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16
+>>>>>>> origin/master
 LIBS =   -lpthread -ldl -lobjc 
 ORIG_SRCS = rmagick.c rmdraw.c rmenum.c rmfill.c rmilist.c rmimage.c rminfo.c rmmain.c rmmontage.c rmpixel.c rmstruct.c rmutil.c
 SRCS = $(ORIG_SRCS) 

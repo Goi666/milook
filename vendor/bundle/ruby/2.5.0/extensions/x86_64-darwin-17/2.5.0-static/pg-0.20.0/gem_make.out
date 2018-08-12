@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-34202-a5uldj.rb extconf.rb 
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-88972-rwqu63.rb extconf.rb 
+>>>>>>> origin/master
 checking for pg_config... yes
 Using config values from /usr/local/bin/pg_config
 checking for libpq-fe.h... yes
@@ -43,10 +48,17 @@ checking for C99 variable length arrays... yes
 creating extconf.h
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
+>>>>>>> origin/master
 make "DESTDIR="
 compiling gvl_wrappers.c
 compiling pg.c
@@ -69,6 +81,12 @@ compiling pg_type_map_in_ruby.c
 compiling util.c
 linking shared-object pg_ext.bundle
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20180811-34202-1uak8o4
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/pg-0.20.0/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20180808-88972-rnji0r
+>>>>>>> origin/master

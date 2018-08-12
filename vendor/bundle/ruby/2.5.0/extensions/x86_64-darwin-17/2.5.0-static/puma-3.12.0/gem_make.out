@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-53792-khu6et.rb extconf.rb
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-12613-3smdtw.rb extconf.rb 
+>>>>>>> origin/master
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+>>>>>>> origin/master
 make "DESTDIR="
 compiling http11_parser.c
 compiling io_buffer.c
@@ -16,6 +28,12 @@ compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.bundle
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20180811-53792-1dyrry6/puma
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20180808-12613-lo4z9o/puma
+>>>>>>> origin/master

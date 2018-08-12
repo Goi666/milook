@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-34202-k9bsfg.rb extconf.rb 
 creating Makefile
@@ -6,6 +7,16 @@ current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/byebug
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-88972-129d4tr.rb extconf.rb 
+creating Makefile
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
+>>>>>>> origin/master
 make "DESTDIR="
 compiling breakpoint.c
 compiling byebug.c
@@ -14,6 +25,12 @@ compiling locker.c
 compiling threads.c
 linking shared-object byebug/byebug.bundle
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180811-34202-1564h4b/byebug
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180808-88972-ds7iwx/byebug
+>>>>>>> origin/master

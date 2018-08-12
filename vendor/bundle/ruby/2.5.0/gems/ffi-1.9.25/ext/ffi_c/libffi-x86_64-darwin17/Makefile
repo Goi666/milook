@@ -16,7 +16,11 @@
 
 
 
+<<<<<<< HEAD
 VPATH = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+=======
+VPATH = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+>>>>>>> origin/master
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -88,9 +92,15 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
+<<<<<<< HEAD
 build_triplet = x86_64-apple-darwin17.7.0
 host_triplet = x86_64-apple-darwin17.7.0
 target_triplet = x86_64-apple-darwin17.7.0
+=======
+build_triplet = x86_64-apple-darwin17.6.0
+host_triplet = x86_64-apple-darwin17.6.0
+target_triplet = x86_64-apple-darwin17.6.0
+>>>>>>> origin/master
 #am__append_1 = doc
 #am__append_2 = src/debug.c
 # Build debug. Define FFI_DEBUG on the commandline so that, when building with
@@ -318,16 +328,26 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
+<<<<<<< HEAD
 ACLOCAL = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing aclocal-1.15
+=======
+ACLOCAL = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing aclocal-1.15
+>>>>>>> origin/master
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LTLDFLAGS = 
 AM_RUNTESTFLAGS = 
 AR = ar
+<<<<<<< HEAD
 AUTOCONF = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing autoconf
 AUTOHEADER = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing autoheader
 AUTOMAKE = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing automake-1.15
+=======
+AUTOCONF = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing autoconf
+AUTOHEADER = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing autoheader
+AUTOMAKE = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing automake-1.15
+>>>>>>> origin/master
 AWK = awk
 CC = clang
 CCAS = clang
@@ -372,9 +392,15 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
+<<<<<<< HEAD
 MAKEINFO = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/install-sh -c -d
+=======
+MAKEINFO = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo
+MANIFEST_TOOL = :
+MKDIR_P = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/install-sh -c -d
+>>>>>>> origin/master
 NM = /usr/bin/nm -B
 NMEDIT = nmedit
 OBJDUMP = objdump
@@ -401,10 +427,17 @@ TARGET = X86_64
 TARGETDIR = x86
 TARGET_OBJ =  src/x86/ffi64.lo src/x86/unix64.lo src/x86/ffiw64.lo src/x86/win64.lo
 VERSION = 3.99999
+<<<<<<< HEAD
 abs_builddir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17
 abs_srcdir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
 abs_top_builddir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17
 abs_top_srcdir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+=======
+abs_builddir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17
+abs_srcdir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+abs_top_builddir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17
+abs_top_srcdir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+>>>>>>> origin/master
 ac_ct_AR = ar
 ac_ct_CC = clang
 ac_ct_CXX = g++
@@ -416,10 +449,17 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_enable_builddir_sed = sed
 bindir = ${exec_prefix}/bin
+<<<<<<< HEAD
 build = x86_64-apple-darwin17.7.0
 build_alias = 
 build_cpu = x86_64
 build_os = darwin17.7.0
+=======
+build = x86_64-apple-darwin17.6.0
+build_alias = 
+build_cpu = x86_64
+build_os = darwin17.6.0
+>>>>>>> origin/master
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -427,15 +467,26 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
+<<<<<<< HEAD
 host = x86_64-apple-darwin17.7.0
 host_alias = 
 host_cpu = x86_64
 host_os = darwin17.7.0
+=======
+host = x86_64-apple-darwin17.6.0
+host_alias = 
+host_cpu = x86_64
+host_os = darwin17.6.0
+>>>>>>> origin/master
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
+<<<<<<< HEAD
 install_sh = ${SHELL} /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/install-sh
+=======
+install_sh = ${SHELL} /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/install-sh
+>>>>>>> origin/master
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -450,6 +501,7 @@ psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
+<<<<<<< HEAD
 srcdir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
 sys_symbol_underscore = yes
 sysconfdir = ${prefix}/etc
@@ -457,12 +509,25 @@ target = x86_64-apple-darwin17.7.0
 target_alias = 
 target_cpu = x86_64
 target_os = darwin17.7.0
+=======
+srcdir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+sys_symbol_underscore = yes
+sysconfdir = ${prefix}/etc
+target = x86_64-apple-darwin17.6.0
+target_alias = 
+target_cpu = x86_64
+target_os = darwin17.6.0
+>>>>>>> origin/master
 target_vendor = apple
 toolexecdir = ${exec_prefix}/lib/gcc-lib/$(target_alias)
 toolexeclibdir = ${exec_prefix}/lib
 top_build_prefix = 
 top_builddir = .
+<<<<<<< HEAD
 top_srcdir = /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+=======
+top_srcdir = /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi
+>>>>>>> origin/master
 AUTOMAKE_OPTIONS = foreign subdir-objects
 ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = include testsuite man $(am__append_1)

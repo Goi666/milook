@@ -1,8 +1,75 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-34202-6aym9t.rb extconf.rb --use-system-libraries
 checking if the C compiler accepts ... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using system libraries.
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-12613-u2r782.rb extconf.rb 
+checking if the C compiler accepts ... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.3.0
+checking for iconv.h... yes
+checking for gzdopen() in -lz... yes
+checking for iconv using --with-iconv-* flags... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.8
+with the following patches applied:
+	- 0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.8.tar.gz into tmp/x86_64-apple-darwin17.6.0/ports/libxml2/2.9.8... OK
+Running git apply with /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
+Running 'configure' for libxml2 2.9.8... OK
+Running 'compile' for libxml2 2.9.8... OK
+Running 'install' for libxml2 2.9.8... OK
+Activating libxml2 2.9.8 (from /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8)...
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxslt-1.1.32.
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+************************************************************************
+Extracting libxslt-1.1.32.tar.gz into tmp/x86_64-apple-darwin17.6.0/ports/libxslt/1.1.32... OK
+Running 'configure' for libxslt 1.1.32... OK
+Running 'compile' for libxslt 1.1.32... OK
+Running 'install' for libxslt 1.1.32... OK
+Activating libxslt 1.1.32 (from /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32)...
+checking for -llzma... yes
+>>>>>>> origin/master
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
 checking for exsltFuncRegister() in libexslt/exslt.h... yes
@@ -15,10 +82,17 @@ checking for xmlSchemaSetValidStructuredErrors()... yes
 checking for xmlSchemaSetParserStructuredErrors()... yes
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+>>>>>>> origin/master
 make "DESTDIR="
 compiling html_document.c
 compiling html_element_description.c
@@ -33,6 +107,7 @@ compiling xml_comment.c
 compiling xml_document.c
 compiling xml_document_fragment.c
 compiling xml_dtd.c
+<<<<<<< HEAD
 xml_dtd.c:47:47: warning: incompatible pointer types passing 'void (void *, void *, const xmlChar *)' (aka 'void (void *, void *, const unsigned char *)') to parameter of type 'xmlHashScanner' (aka 'void (*)(void *, void *, unsigned char *)') [-Wincompatible-pointer-types]
   xmlHashScan((xmlHashTablePtr)dtd->entities, element_copier, (void *)hash);
                                               ^~~~~~~~~~~~~~
@@ -58,6 +133,8 @@ xml_dtd.c:113:47: warning: incompatible pointer types passing 'void (void *, voi
                                          xmlHashScanner f,
                                                         ^
 4 warnings generated.
+=======
+>>>>>>> origin/master
 compiling xml_element_content.c
 compiling xml_element_decl.c
 compiling xml_encoding_handler.c
@@ -81,8 +158,17 @@ compiling xml_xpath_context.c
 compiling xslt_stylesheet.c
 linking shared-object nokogiri/nokogiri.bundle
 Cleaning files only used during build.
+<<<<<<< HEAD
 rm -rf /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/archives
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180811-34202-f78ume/nokogiri
+=======
+rm -rf /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri/tmp/x86_64-apple-darwin17.6.0/ports
+rm -rf /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180808-12613-18mccpw/nokogiri
+>>>>>>> origin/master

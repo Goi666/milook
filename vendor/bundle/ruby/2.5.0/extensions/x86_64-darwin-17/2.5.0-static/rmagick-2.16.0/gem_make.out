@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
 /Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180811-34202-gn0pzt.rb extconf.rb --use-system-libraries
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
+/Users/eigo/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180808-88972-u7hvsk.rb extconf.rb 
+>>>>>>> origin/master
 checking for clang... yes
 checking for Magick-config... yes
 checking for outdated ImageMagick version (<= 6.4.9)... no
@@ -129,18 +134,31 @@ creating Makefile
 
 
 ======================================================================
+<<<<<<< HEAD
 Sat 11Aug18 04:14:28
+=======
+Wed 08Aug18 19:48:24
+>>>>>>> origin/master
 This installation of RMagick 2.16.0 is configured for
 Ruby 2.5.1 (x86_64-darwin17) and ImageMagick 6.9.10
 ======================================================================
 
 
+<<<<<<< HEAD
 Configured compile options: {:magick_config=>true, :with_magick_wand=>true, :pkg_config=>false, :magick_version=>"6.9.10", :local_libs=>" -L/usr/local/Cellar/imagemagick@6/6.9.10-9/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16", :cflags=>" -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-9/include/ImageMagick-6", :cppflags=>" -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-9/include/ImageMagick-6", :ldflags=>" -L/usr/local/Cellar/imagemagick@6/6.9.10-9/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16", :defs=>[], :config_h=>"Makefile rmagick.h"}
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
 make "DESTDIR=" clean
 
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
+=======
+Configured compile options: {:magick_config=>true, :with_magick_wand=>true, :pkg_config=>false, :magick_version=>"6.9.10", :local_libs=>" -L/usr/local/Cellar/imagemagick@6/6.9.10-8/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16", :cflags=>" -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-8/include/ImageMagick-6", :cppflags=>" -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-8/include/ImageMagick-6", :ldflags=>" -L/usr/local/Cellar/imagemagick@6/6.9.10-8/lib -lMagickWand-6.Q16 -lMagickCore-6.Q16", :defs=>[], :config_h=>"Makefile rmagick.h"}
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
+make "DESTDIR=" clean
+
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
+>>>>>>> origin/master
 make "DESTDIR="
 compiling rmagick.c
 compiling rmdraw.c
@@ -186,7 +204,11 @@ rmimage.c:3962:5: warning: 'ConstituteComponentTerminus' is deprecated [-Wdeprec
 ./rmagick.h:166:33: note: expanded from macro 'DestroyConstitute'
 #define DestroyConstitute(void) ConstituteComponentTerminus(void)
                                 ^
+<<<<<<< HEAD
 /usr/local/Cellar/imagemagick@6/6.9.10-9/include/ImageMagick-6/magick/deprecate.h:328:55: note: 'ConstituteComponentTerminus' has been explicitly marked deprecated here
+=======
+/usr/local/Cellar/imagemagick@6/6.9.10-8/include/ImageMagick-6/magick/deprecate.h:328:55: note: 'ConstituteComponentTerminus' has been explicitly marked deprecated here
+>>>>>>> origin/master
   ConstituteComponentTerminus(void) magick_attribute((deprecated)),
                                                       ^
 rmimage.c:8284:16: warning: address of array 'image->filename' will always evaluate to 'true' [-Wpointer-bool-conversion]
@@ -217,6 +239,12 @@ rmstruct.c:967:13: note: add missing switch cases
 compiling rmutil.c
 linking shared-object RMagick2.bundle
 
+<<<<<<< HEAD
 current directory: /Users/eigo/Rails/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20180811-34202-15sp4qh
+=======
+current directory: /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/rmagick-2.16.0/ext/RMagick
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20180808-88972-mbquvs
+>>>>>>> origin/master
