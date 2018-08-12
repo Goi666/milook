@@ -1,0 +1,42 @@
+<div class="main-body">
+    <div class="title-name">
+        <h1><%= @com.company_name %></h1>
+    </div>
+    <%= high_chart("sample", @graph) %>
+
+    <!-- データ追加 -->
+    <div class="right_btn">
+        <%= button_to "データ追加" , "#{@com.id}/data" , {method: :get ,class: "btn-lg btn-warning right_btn"} %>
+    </div>
+    <!-- 削除 -->
+    <div class="right_btn">
+        <% if @com.user_id == current_user.user_id %>
+            <%= link_to("/company/#{@com.id}/destroy",{method:"post"}) do %>
+                <button type="button" class="btn btn-outline-primary destroy_btn">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>投稿削除</button>
+            <% end %>
+        <% end %>
+    </div>
+    
+    <!-- コメント -->
+    <div class="comment">
+        <h4>コメント</h4>
+        <div id="comments_area"><!-- #① -->
+        <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+            <%= render partial: 'comments/index', locals: { comments: @comments } %>
+            <%= paginate @comments %>
+            <br>
+        </div>
+        <div class="comment-push">  
+            <% if user_signed_in? %>
+            <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+            <%= render partial: 'comments/form', locals: {company: @company,comment: @comment}  %>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="return">
+        <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
+    </div>
+
+</div>

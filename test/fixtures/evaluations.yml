@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  primary: MyString
+  key: MyString
+  company_id: 1
+  environment: 1
+  salary: 1
+  overtime: 1
+  boss: 1
+  corporate_style: 1
+  management: 1
+  dangerous: 1
+  other: 1
+
+two:
+  id: 1
+  primary: MyString
+  key: MyString
+  company_id: 1
+  environment: 1
+  salary: 1
+  overtime: 1
+  boss: 1
+  corporate_style: 1
+  management: 1
+  dangerous: 1
+  other: 1

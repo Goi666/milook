@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Milook</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-white">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="nav-item active">
+            <%= link_to image_tag("/logo.png") , "/" ,{ :class => "nav-link title"} %></span></a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 
+          <li class="nav-item active"><%= link_to "Search", company_index_path ,{ :class => "menu"} %></li>
+          <li class="nav-item active"><%= link_to "Ranking", company_index_path ,{ :class => "menu"} %></li>
+          <li class="nav-item active"><%= link_to "MyPage", company_index_path ,{ :class => "menu"} %></li>
+          -->
+          <% if user_signed_in? %>
+            <li class="nav-item active menu"><strong>
+                <%= link_to "#{current_user.user_id}", edit_user_registration_path ,{:class => "login-name"} %><span class="text-dark">さん<span>
+            </strong></li>
+
+            <li class="nav-item active menu"><%= link_to "Logout", destroy_user_session_path ,{:class => "menu"} %></li>
+          <% end %>
+          
+        </ul>
+      </div>
+    </nav>
+    <div class="line"></div>
+    <div id="wrapper">
+      <div id="message">
+          <% if flash[:notice] %>
+            <%= javascript_include_tag 'message.js' %>
+            <p><%= flash[:notice] %></p>
+          <% end %>
+          <% if alert %>
+            <%= javascript_include_tag 'message.js' %>
+            <p class="alert alert-error"><%= alert %></p>
+          <% end %>
+      </div>
+    </div>
+        <%= yield %>
+      
+    <script>
+
+    </script>
+  </body>
+</html>

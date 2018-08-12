@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "https://fonts.googleapis.com/earlyaccess/sawarabimincho.css";
+@import "bootstrap";
+@import "index";
+@import "toppage";
+@import "comment";
+@import "company";
+
+body,html{
+    width:100%;
+    height: 100%;
+    font-family: "Sawarabi Mincho";
+}
+
+.main-body {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    padding: 0 30px 0 30px;
+
+    border-left: double 3px black;
+    border-top: double 3px black;
+}
+
+
+.title-name {
+    width: 50%;
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+
+.menu {
+   font-size: 16px;
+   margin-right:10px ;
+   &:visited {
+    color: black;
+    text-decoration: none;
+   }
+   &:hover {
+       color: aqua;
+   }
+}
+
+.container-fluid {
+    margin-top: -20px;
+    position: relative;
+    .navbar-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.login-name {
+    color:rgba(180, 81, 226, 0.753);
+}
+
+.button_to {
+    margin-top: 20px;
+}
+
+.right_btn {
+    text-align: right;
+}
+
+.return {
+    margin: 20px;
+    text-align: right;
+}
+.row {
+    margin: 0 auto;
+}
+
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+
+#message {
+    background-color: orange;
+    width: 100%;
+    height: 30px;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    p {
+        padding: 0 50px;
+    }
+
+}

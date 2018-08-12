@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  primary: MyString
+  key: MyString
+  company_id: 1
+  company_type: 1
+  company_name: MyString
+  company_url: MyString
+
+two:
+  id: 1
+  primary: MyString
+  key: MyString
+  company_id: 1
+  company_type: 1
+  company_name: MyString
+  company_url: MyString
