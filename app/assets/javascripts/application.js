@@ -21,8 +21,6 @@
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
-<<<<<<< HEAD
-//= require message
-=======
 
->>>>>>> origin/master
+//= require notice
+//= require alert

@@ -86,9 +86,11 @@ class CompanyController < ApplicationController
         @company = Company.new(company_params)
 
         if @company.save
+            flash[:notice] = "「" + @company.company_name + "」を新しく登録しました"
             redirect_to company_index_path
             #format.html { redirect_to @company, notice: 'Company was successfully created.' }
         else
+            flash[:alert] = @company.errors.full_messages
             render new_company_path
         end
     end
@@ -103,8 +105,11 @@ class CompanyController < ApplicationController
         @evaluation = Evaluation.new(evaluation_params)
 
         if @evaluation.save
+            flash[:notice] = "新しくデータを追加しました"
             redirect_to company_index_path
         else
+            @com = Company.find_by_id(@evaluation.company_id)
+            flash[:alert] = @evaluation.errors.full_messages
             render :data
         end
     end
@@ -121,7 +126,7 @@ class CompanyController < ApplicationController
     private
     def company_params
         params.require(:company).
-        permit(:company_name, :company_type, :image, :user_id,
+        permit(:company_name, :company_type, :company_url, :image, :user_id,
             evaluations_attributes:
                 [:environment,:salary,:overtime,:boss,:corporate_style,:management,:dangerous,:other]
         )

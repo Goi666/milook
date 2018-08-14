@@ -1,78 +1,87 @@
 <div class="main-body">
     <br>
-    <%= form_for(@company, url: company_index_path) do |f| %>
-        <div class="field">
-            <%= f.label(:company_name,"会社名") %>
-            <%= f.text_field(:company_name) %><br>
-        </div>
-        <div class="field">
-            <%= f.label(:company_type,"会社の種類") %>
-            <%= f.select :company_type, options_for_select([["IT", 1], ["営業", 2],["販売", 3], ["マスコミ", 4],["工業", 5], ["その他", 6]]), :include_blank => true %><br>
-        </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <%= form_for(@company, url: company_index_path) do |f| %>
+                <div class="form-group">
+                    <%= f.label(:company_name, class: "form-label") %>
+                    <%= f.text_field(:company_name, class: "form-control") %><br>
+                </div>
+                <div class="">
+                    <%= f.label(:company_type) %>
+                    <%= f.select :company_type, options_for_select([["IT", 1], ["営業", 2],["販売", 3], ["マスコミ", 4],["工業", 5], ["その他", 6]]), {include_blank: true} ,{class: "form-control"} %><br>
+                </div>
+                <div class="form-group">
+                    <%= f.label(:company_url,"ホームページのURL") %><br>
+                    <%= f.text_field(:company_url, class: "form-control") %><br>
+                </div>
 
-        <div class="field">
-            <%= f.label :image %><br>
-            <%= f.file_field :image %><br>
-            <%= f.hidden_field :image_cache %>
-        </div>
+                <div class="form-group">
+                    <%= f.label :image,"画像" %><br>
+                    <%= f.file_field :image %><br>
+                    <%= f.hidden_field :image_cache %>
+                </div>
 
-        <div class="field">
-            <%= f.hidden_field :user_id,:value => current_user.user_id %>
-        </div>
+                <div class="form-group">
+                    <%= f.hidden_field :user_id,:value => current_user.user_id %>
+                </div>
 
-        <br>
-        <hr>
-        <br>
-        <h5>データ入力</h5>
-        <h6>[真っ黒い会社] 10>7>5>3>1 [真っ白な会社]</h6>
-        <br>
-        <%= f.fields_for :evaluations do |b| %>
-        <div class="field">
-            <%= b.label(:environment, "環境") %>
-            <%= b.select :environment, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]],), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                <br>
+                <hr>
+                <br>
+                <h5>データ入力</h5>
+                <h6>※会社を１０段階で評価してください（値が高いほど劣悪）</h6>
+                <br>
+                <%= f.fields_for :evaluations do |b| %>
+                <div class="form-group">
+                    <%= b.label(:environment,"環境") %>
+                    <%= b.select :environment, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]],) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:salary,"給料") %>
-            <%= b.select :salary, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                    <%= b.label(:salary,"給料") %>
+                    <%= b.select :salary, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:overtime,"残業") %>
-            <%= b.select :overtime, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                    <%= b.label(:overtime,"残業") %>
+                    <%= b.select :overtime, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:boss,"上司") %>
-            <%= b.select :boss, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                    <%= b.label(:boss,"上司") %>
+                    <%= b.select :boss, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:corporate_style,"社風") %>
-            <%= b.select :corporate_style, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                    <%= b.label(:corporate_style,"社風") %>
+                    <%= b.select :corporate_style, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:management,"経営方針") %>
-            <%= b.select :management, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
+                    <%= b.label(:management,"経営方針") %>
+                    <%= b.select :management, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
 
-            <%= b.label(:dangerous,"ヤベーやつ") %>
-            <%= b.select :dangerous, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <div class="field">
-            <%= b.label(:other,"その他") %>
-            <%= b.select :other, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]), :include_blank => true %><br>
-        </div>
-        <% end %>
+                    <%= b.label(:dangerous,"やばいこと") %>
+                    <%= b.select :dangerous, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <div class="form-group">
+                    <%= b.label(:other,"その他") %>
+                    <%= b.select :other, options_for_select([["1", 1], ["2", 2],["3", 3], ["4", 4],["5", 5], ["6", 6],["7", 7], ["8", 8],["9", 9], ["10", 10]]) ,{include_blank: true}, class: "form-control" %><br>
+                </div>
+                <% end %>
 
-        <div class="actions">
-            <%= f.submit "登録" , :class => "btn-lg btn-warning" %>
+                <div class="actions">
+                    <%= f.submit "登録" , :class => "btn-lg btn-warning" %>
+                </div>
+            <% end %>
         </div>
-    <% end %>
-
-    <div class="return">
-        <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
     </div>
+    </div>
+    <div class="return">
+                <%= button_to "戻る", company_index_path, {method: :get, class: "btn-lg btn-success"} %>
+            </div>
 </div>

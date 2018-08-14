@@ -36,33 +36,30 @@
       </div>
     </nav>
     <div class="line"></div>
-<<<<<<< HEAD
+
     <div id="wrapper">
       <div id="message">
           <% if flash[:notice] %>
-            <%= javascript_include_tag 'message.js' %>
+            <%= javascript_include_tag 'notice.js' %>
             <p><%= flash[:notice] %></p>
           <% end %>
-          <% if alert %>
-            <%= javascript_include_tag 'message.js' %>
-            <p class="alert alert-error"><%= alert %></p>
+          <% if flash[:alert] %>
+            <% if @company.errors.any? %>
+              <%= javascript_include_tag 'alert.js' %>
+                <div class="alert">
+                  <h4><%= @company.errors.count %>件のエラーがあります。</h4>
+  
+                  <ul>
+                  <% @company.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  </ul>
+                  <% end %>
+                </div>
+            <% end %>
           <% end %>
       </div>
     </div>
         <%= yield %>
       
-    <script>
-
-    </script>
-=======
-        <% if flash[:notice] %>
-          <p><%= flash[:notice] %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert alert-error"><%= alert %></p>
-        <% end %>
-
-    <%= yield %>
->>>>>>> origin/master
   </body>
 </html>

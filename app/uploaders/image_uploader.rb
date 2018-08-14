@@ -1,7 +1,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
-  process resize_to_limit: [300, 200]
+  process resize_to_fit: [300, 300]
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -11,6 +11,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+  def size_range
+    1..5.megabytes
   end
   
 

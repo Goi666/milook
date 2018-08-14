@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :alert_any
 
   # before_action :set_current_user
   # def set_current_user
@@ -19,15 +20,19 @@ class ApplicationController < ActionController::Base
     #   u.permit(:user_id, :password, :password_confirmation)
     # }
     devise_parameter_sanitizer.permit(:sign_up){|u|
-      u.permit(:user_id, :password, :password_confirmation)
+      u.permit(:user_id, :password,:email, :password_confirmation)
     }
 
     # devise_parameter_sanitizer.for(:sign_in){|u|
     #   u.permit(:user_id, :password, :remember_me)
     # }
     devise_parameter_sanitizer.permit(:sign_in){|u|
-      u.permit(:user_id, :password, :remember_me)
+      u.permit(:user_id, :password,:email, :remember_me)
     }
+  end
+
+  def alert_any
+    @company = Company.new
   end
     
 end

@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -93,6 +90,8 @@ gem 'carrierwave', '~> 1.1'
 gem 'rmagick'
 
 gem 'kaminari', '~> 0.17.0'
+
+gem 'rails-i18n'
 
 ## gem 'pry-rails'
 ## gem 'pry-byebug'

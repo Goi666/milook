@@ -68,14 +68,16 @@ Rails.application.configure do
     #   host: ENV['localhost'],
     #   port: ENV['3000']
     # }
-    # config.action_mailer.raise_delivery_errors = true
-    # config.action_mailer.delivery_method = :smtp
-    # config.action_mailer.smtp_settings = {
-    #   address: "kakedashiit@gmail.com",
-    #   port: 587,
-    #   user_name: ENV['魔法少女いっと'],
-    #   password: ENV['yoruhamijikashi62'],
-    #   authentication: :plain,
-    #   enable_starttls_auto: true
-    # }
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: "smtp.sendgrid.net",
+      #domain: "kakedashiit@gmail.com",
+      port: 587,
+      user_name: ENV['XXX(0813申請中)'],
+      password: ENV['yoruhamijikashi62'],
+      authentication: 'login',
+      # authentication: :plain,
+      enable_starttls_auto: true
+    }
 end
