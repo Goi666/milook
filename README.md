@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+・Milookとは
+会社の評判を共有する掲示板
 
-Things you may want to cover:
+・プレリリース
+2018年夏頃
 
-* Ruby version
+・今後の予定
+2019年4月〜
+React導入
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+・基本技術
+Ruby on Rails
+Ruby
+PostgreSQL
+Ajax
+Sass
+Javascript
