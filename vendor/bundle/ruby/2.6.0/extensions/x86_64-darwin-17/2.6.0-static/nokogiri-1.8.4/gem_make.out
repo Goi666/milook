@@ -1,0 +1,108 @@
+current directory: /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.8.4/ext/nokogiri
+/Users/goi/.rbenv/versions/2.6.0/bin/ruby -I /Users/goi/.rbenv/versions/2.6.0/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190401-96729-1277scv.rb extconf.rb --use-system-libraries\ --with-xml2-include\=/usr/local/opt/libxml2/include/libxml2
+checking if the C compiler accepts ... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.3.0
+checking for iconv.h... yes
+checking for gzdopen() in -lz... yes
+sh: CC_WRAPPER: command not found
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.8
+with the following patches applied:
+	- 0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.8.tar.gz into tmp/x86_64-apple-darwin17.7.0/ports/libxml2/2.9.8... OK
+Running git apply with /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.8.4/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
+Running 'configure' for libxml2 2.9.8... ERROR, review '/Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.8.4/ext/nokogiri/tmp/x86_64-apple-darwin17.7.0/ports/libxml2/2.9.8/configure.log' to see what happened. Last lines are:
+========================================================================
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking build system type... x86_64-apple-darwin18.2.0
+checking host system type... x86_64-apple-darwin17.7.0
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for x86_64-apple-darwin17.7.0-strip... no
+checking for strip... strip
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-apple-darwin17.7.0-gcc... $(CC_WRAPPER) clang
+checking whether the C compiler works... no
+configure: error: in `/Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.8.4/ext/nokogiri/tmp/x86_64-apple-darwin17.7.0/ports/libxml2/2.9.8/libxml2-2.9.8':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+========================================================================
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/goi/.rbenv/versions/2.6.0/bin/$(RUBY_BASE_NAME)
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:402:in `block in execute': Failed to complete configure task (RuntimeError)
+	from /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `chdir'
+	from /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `execute'
+	from /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:110:in `configure'
+	from /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:153:in `cook'
+	from extconf.rb:365:in `block (2 levels) in process_recipe'
+	from extconf.rb:257:in `block in chdir_for_build'
+	from extconf.rb:256:in `chdir'
+	from extconf.rb:256:in `chdir_for_build'
+	from extconf.rb:364:in `block in process_recipe'
+	from extconf.rb:262:in `tap'
+	from extconf.rb:262:in `process_recipe'
+	from extconf.rb:551:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-17/2.6.0-static/nokogiri-1.8.4/mkmf.log
+
+extconf failed, exit code 1

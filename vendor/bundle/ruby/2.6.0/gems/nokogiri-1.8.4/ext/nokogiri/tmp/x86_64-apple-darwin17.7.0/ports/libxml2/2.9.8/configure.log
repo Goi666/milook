@@ -1,0 +1,20 @@
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking build system type... x86_64-apple-darwin18.2.0
+checking host system type... x86_64-apple-darwin17.7.0
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for x86_64-apple-darwin17.7.0-strip... no
+checking for strip... strip
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-apple-darwin17.7.0-gcc... $(CC_WRAPPER) clang
+checking whether the C compiler works... no
+configure: error: in `/Users/goi/Projects/milook/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.8.4/ext/nokogiri/tmp/x86_64-apple-darwin17.7.0/ports/libxml2/2.9.8/libxml2-2.9.8':
+configure: error: C compiler cannot create executables
+See `config.log' for more details

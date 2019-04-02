@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/eigo/.rbenv/versions/2.5.1/include/ruby-2.5.0
+topdir = /Users/goi/.rbenv/versions/2.5.1/include/ruby-2.5.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/eigo/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17
+arch_hdrdir = /Users/goi/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/eigo/.rbenv/versions/2.5.1
+prefix = $(DESTDIR)/Users/goi/.rbenv/versions/2.5.1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,13 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-<<<<<<< HEAD
-sitearchdir = $(DESTDIR)./.gem.20180811-34202-f78ume
-sitelibdir = $(DESTDIR)./.gem.20180811-34202-f78ume
-=======
-sitearchdir = $(DESTDIR)./.gem.20180808-12613-18mccpw
-sitelibdir = $(DESTDIR)./.gem.20180808-12613-18mccpw
->>>>>>> origin/master
+sitearchdir = $(DESTDIR)./.gem.20190401-30243-1g7knpn
+sitelibdir = $(DESTDIR)./.gem.20190401-30243-1g7knpn
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -86,22 +81,13 @@ optflags = -O3
 debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
-<<<<<<< HEAD
-CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe     $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/local/Cellar/libxml2/2.9.7/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.32/include -I/usr/local/Cellar/libxml2/2.9.7/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.32/include -I/usr/local/Cellar/libxml2/2.9.7/include/libxml2
+CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe    $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/include/libxml2 -I/usr/include/libxml2
 DEFS     = 
-CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/eigo/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) $(cxxflags)    $(ARCH_FLAG)
-ldflags  = -L. -L/Users/eigo/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.7/lib -L/usr/local/Cellar/libxslt/1.1.32/lib -L/usr/local/Cellar/libxml2/2.9.7/lib -L/usr/local/Cellar/libxslt/1.1.32/lib -L/usr/local/Cellar/libxml2/2.9.7/lib
-=======
-CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe  -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
-DEFS     = 
-CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32/include -I/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/include/libxml2 -I/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/include/libxml2 -I/Users/eigo/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"0001-Revert-Do-not-URI-escape-in-server-side-includes.patch\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
-CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/Users/eigo/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib
->>>>>>> origin/master
-dldflags = -L/Users/eigo/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/usr/local/opt/libxml2/include/libxml2 -I/Users/goi/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags)   $(ARCH_FLAG)
+ldflags  = -L. -L/Users/goi/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib  
+dldflags = -L/Users/goi/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
@@ -116,7 +102,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin17
+arch = x86_64-darwin18
 sitearch = $(arch)
 ruby_version = 2.5.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -136,13 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-<<<<<<< HEAD
 libpath = . $(libdir)
 LIBPATH =  -L. -L$(libdir)
-=======
-libpath = . $(libdir) /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/lib /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32/lib /usr/local/Cellar/xz/5.2.4/lib
-LIBPATH =  -L. -L$(libdir) -L/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/lib -L/Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32/lib -L/usr/local/Cellar/xz/5.2.4/lib
->>>>>>> origin/master
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -153,11 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
-<<<<<<< HEAD
-LIBS =   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  
-=======
-LIBS =  /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32/lib/libexslt.a -lm -liconv -lpthread -llzma -lz /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/lib/libxml2.a /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxslt/1.1.32/lib/libxslt.a -lm -liconv -lpthread -llzma -lz /Users/eigo/Desktop/milook/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin17.6.0/libxml2/2.9.8/lib/libxml2.a -llzma -lpthread -ldl -lobjc  
->>>>>>> origin/master
+LIBS =   -lxslt -lxml2 -lz -lpthread -licucore -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -licucore -lm -lxml2 -lpthread -lgmp -ldl -lobjc  
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
@@ -646,8 +623,4 @@ xslt_stylesheet.o: xslt_stylesheet.c xslt_stylesheet.h nokogiri.h	\
 all: clean-ports
 
 clean-ports: $(DLLIB)
-<<<<<<< HEAD
 	-$(Q)$(RUBY) $(srcdir)/extconf.rb --clean --disable-static
-=======
-	-$(Q)$(RUBY) $(srcdir)/extconf.rb --clean --enable-static
->>>>>>> origin/master

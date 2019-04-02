@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/eigo/.rbenv/versions/2.5.1/include/ruby-2.5.0
+topdir = /Users/goi/.rbenv/versions/2.5.1/include/ruby-2.5.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/eigo/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin17
+arch_hdrdir = /Users/goi/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-darwin18
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/eigo/.rbenv/versions/2.5.1
+prefix = $(DESTDIR)/Users/goi/.rbenv/versions/2.5.1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,13 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-<<<<<<< HEAD
-sitearchdir = $(DESTDIR)./.gem.20180811-34202-1uak8o4
-sitelibdir = $(DESTDIR)./.gem.20180811-34202-1uak8o4
-=======
-sitearchdir = $(DESTDIR)./.gem.20180808-88972-rnji0r
-sitelibdir = $(DESTDIR)./.gem.20180808-88972-rnji0r
->>>>>>> origin/master
+sitearchdir = $(DESTDIR)./.gem.20190401-30243-yvijlm
+sitelibdir = $(DESTDIR)./.gem.20190401-30243-yvijlm
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -89,10 +84,10 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/usr/local/Cellar/postgresql/10.4/include -I/Users/eigo/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/usr/local/Cellar/postgresql/11.1/include -I/Users/goi/.rbenv/versions/2.5.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/Users/eigo/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib -Wl,-rpath,/usr/local/lib
-dldflags = -L/Users/eigo/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+ldflags  = -L. -L/Users/goi/.rbenv/versions/2.5.1/lib  -fstack-protector -L/usr/local/lib -Wl,-rpath,/usr/local/lib
+dldflags = -L/Users/goi/.rbenv/versions/2.5.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
@@ -107,7 +102,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin17
+arch = x86_64-darwin18
 sitearch = $(arch)
 ruby_version = 2.5.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -139,7 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS =  -lpq  -lpthread -ldl -lobjc 
+LIBS =  -lpq  -lpthread -lgmp -ldl -lobjc 
 ORIG_SRCS = gvl_wrappers.c pg.c pg_binary_decoder.c pg_binary_encoder.c pg_coder.c pg_connection.c pg_copy_coder.c pg_errors.c pg_result.c pg_text_decoder.c pg_text_encoder.c pg_type_map.c pg_type_map_all_strings.c pg_type_map_by_class.c pg_type_map_by_column.c pg_type_map_by_mri_type.c pg_type_map_by_oid.c pg_type_map_in_ruby.c util.c
 SRCS = $(ORIG_SRCS) 
 OBJS = gvl_wrappers.o pg.o pg_binary_decoder.o pg_binary_encoder.o pg_coder.o pg_connection.o pg_copy_coder.o pg_errors.o pg_result.o pg_text_decoder.o pg_text_encoder.o pg_type_map.o pg_type_map_all_strings.o pg_type_map_by_class.o pg_type_map_by_column.o pg_type_map_by_mri_type.o pg_type_map_by_oid.o pg_type_map_in_ruby.o util.o

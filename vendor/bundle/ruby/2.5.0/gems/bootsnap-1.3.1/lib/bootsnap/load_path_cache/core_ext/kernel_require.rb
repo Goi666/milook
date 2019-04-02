@@ -29,10 +29,6 @@ module Kernel
       return require_with_bootsnap_lfi(path, resolved)
     end
 
-<<<<<<< HEAD
-    #8/11 cannot load such file -- concurrent/map (LoadError)
-=======
->>>>>>> origin/master
     raise Bootsnap::LoadPathCache::CoreExt.make_load_error(path)
   rescue Bootsnap::LoadPathCache::ReturnFalse
     return false
