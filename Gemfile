@@ -96,3 +96,7 @@ gem 'rails-i18n'
 ## gem 'pry-rails'
 ## gem 'pry-byebug'
 ## gem 'pry-doc'
+
+## React導入
+
+gem "react_on_rails"
